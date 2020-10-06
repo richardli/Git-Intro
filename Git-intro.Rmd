@@ -99,6 +99,7 @@ GitHub  offers many additional services:
 + Gists
 + Wikis
 + GitHub  pages
++ Integration with other productivity/teamwork apps (e.g., Slack)
 
 An academic GitHub  account with unlimited public and private repositories is free.
 
@@ -261,6 +262,9 @@ Otherwise, likely you have a merge conflict
 + There are tools to make it easy to make releases, generate help files, and for others to install directly from GitHub and provide feedback.
 + Many more flexible features to write documents, vignettes, and websites, e.g., [pkgdown](https://pkgdown.r-lib.org/)
 + Tools to check your package can build, install, and 'works', e.g., [TravisCI](https://docs.travis-ci.com/user/languages/r)  
+
+### GitHub pages
++ A very useful way to set up your personal/professional website or specific projects: [pages.github](https://pages.github.com/).
 
 ---
 # So, will my Git now go smoothly?
