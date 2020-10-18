@@ -257,11 +257,9 @@ knitr::include_graphics("figures/xkcd.png")
 + **Pull** before push
   * get the remote updates others have made.
 
----
-# Tutorial IV: Merging changes
-If nothing shows up after pulling --> awesome!
++ If nothing shows up after pulling --> awesome!
 
-Otherwise, likely you have a merge conflict
++ Otherwise, likely you have a merge conflict
   * This happens when you and your collaborator made changes on the same lines of codes in the same file, that Git does not know how to resolve automatically.
   * You will need to tell Git what final version would be.
   * There are different tools to make the side-by-side comparison easier visually. 
@@ -287,7 +285,7 @@ Otherwise, likely you have a merge conflict
 ---
 # Additional topics
 ### Latex
-+ `.gitignore` can be very helpful in maintain only the necessary files to compile (no .aux, .log, .out, .bbl, .blg, ..., or even the paper.pdf)
++ `.gitignore` can be very helpful in maintaining only the necessary files to compile (no .aux, .log, .out, .bbl, .blg, ..., or even the paper.pdf)
 + Some people use a Makefile to compile, which can be useful when you have multiple .tex files.
 + Line break after each sentence is good for git diff to track, but can be annoying to collaborators (or yourself!)
 + Overleaf/ShareLaTex is a good alternative (when you have good internet).
@@ -309,14 +307,18 @@ Otherwise, likely you have a merge conflict
 
 
 ---
-<br><br>
+# Don't be discouraged!
 
-.center[## Git is expressly designed to make you feel less intelligent than you thought you were.] 
+
+.center[### Git is expressly designed to make you feel less intelligent than you thought you were.] 
 
 .right[-- Andrew Morton, when introducing Linus Torvalds <br>at a 2007 Google tech talk]
 
-<br><br>
-_Not really, but don't feel discouraged if you need to try a few times to get it right!_
+<br>
+.center[### So I think it used to be true but isn’t any more. There is a few reasons people feel that way, but I think only one of them remains. The one that remains is fairly simple: “you can do things so many ways.” ... Generally, the best way to learn git is probably to first only do very basic things and not even look at some of the things you can do until you are familiar and confident about the basics.]
+
+.right[-- Linus Torvalds, 2015]
+
 
 ---
 ## Topics not covered here
