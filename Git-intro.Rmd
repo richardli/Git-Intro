@@ -7,7 +7,22 @@ output:
   xaringan::moon_reader
 ---
  
+# Overview
+#### This lecture
++ A brief history and philosophy of version control and workflow in research settings. 
++ Introduction to Git and GitHub.
++ Hands-on tutorials: using Git.
++ Some additional topics that might be of interest, particular to STAT students. 
 
+#### What I hope us to achieve
++ Reflect on your workflow and think if Git will be useful to you in your current and future projects.
++ If you are regular Git user, have some fun and feel free to share your tips with the group. 
++ If you are new to Git, get familiar with the concepts and basic operations. 
+
+#### These slides at: [https://github.com/richardli/Git-Intro](https://github.com/richardli/Git-Intro)
+
+
+---
 # Collaboration in research
 
 Most academic researchers use two strategies for collaboration:
@@ -35,6 +50,7 @@ Most academic researchers use two strategies for collaboration:
 + No versioning or branching.
 + Conflicts cannot arise when multiple people working on the same document online.
 + Offline work either impossible or difficult to merge.
++ Difficult (impossible?) for collaborative coding projects.
 
 
 ---
@@ -48,10 +64,10 @@ Managing complex projects can be difficult when you have
 
 These approaches do not scale to complex collaborative projects. Someone needs to be on top of all the files and changes to fix any errors (without destroying other changes).
 
-**System for managing collaboration**
+####System for managing collaboration
 In software engineering, workers have developed _social and technological solutions_ to the problem of managing collaborative work. 
 
-The technological aspect of this system is usually called _version control_ 
+The technological aspect of this system is usually called _version control_.
 
 
 ---
@@ -103,7 +119,8 @@ GitHub  offers many additional services:
 
 An academic GitHub  account with unlimited public and private repositories is free.
 
-??? Switch to chrome to take a look at GitHub  account
+---
+.center[![](figures/github.png)]
 
 ---
 # Getting started with Git
@@ -125,11 +142,9 @@ If you do not have an GitHub  account, sign up at:
 ---
 # Graphical interfaces to Git
 
-GitHub  Desktop and Sourcetree are two of the most popular GUIs. I will use Sourcetree in this tutorial. 
+GitHub  Desktop and Sourcetree are two of the most popular GUIs. I will use Sourcetree in this tutorial. You can connect your GitHub  account (or other online platforms) to Sourcetree in `Preferences > Accounts`.
 
-You can connect your GitHub  account (or other online platforms) to Sourcetree in `Preferences > Accounts`.
-
-[Sourcetree Screenshot]
+.center[![](figures/sourcetree.png)]
 
 
 ---
@@ -145,8 +160,17 @@ These simple steps cover a large proportion of routine workflow with Git.
 
 ---
 # Tutorial I: clone these slides
-+ From github website
-+ From sourcetree
+.center[[https://github.com/richardli/Git-Intro](https://github.com/richardli/Git-Intro)]
+
+.pull-left[ 
+  From the web page:
+  ![](figures/clone1.png)
+]
+.pull-right[ 
+  From Sourcetree:
+  ![](figures/clone2.png)
+]
+
 
 These are your local copies. Making changes does not affect the upstream repo (in my account). 
 
@@ -156,22 +180,33 @@ What if you want to collaborate in someone else's repo?
 
 ---
 # Tutorial I: look inside a repo
-+ README
+
+.pull-left[ 
+  ![](figures/folder1.png)
+]
+.pull-right[ 
+  ![](figures/folder2.png)
+]
+
++ **README**
+  + Things the authors want people to know upfront.
++ **.git**
+  + A directory of lots of goodies in your project -- you don't need to interact with it directly. 
++ **.gitignore** 
+  + A file that tells git which files should not be tracked.
 
 
 ---
 # Tutorial I: look into the past
-+ History
-+ .git
-+ .gitignore
+.center[![](figures/sourcetree.png)]
 
 ---
 # Tutorial II: Create your remote repo
-[screenshot of GitHub ]
+.center[![](figures/create-repo.png)]
 
 ---
 # Tutorial II: Create your local repo
-[screenshot of sourcetree]
+.center[![](figures/clone2.png)]
 
 ---
 # Tutorial III: More than Cmd+S
@@ -257,6 +292,8 @@ Otherwise, likely you have a merge conflict
 + Line break after each sentence is good for git diff to track, but can be annoying to collaborators (or yourself!)
 + Overleaf/ShareLaTex is a good alternative (when you have good internet).
 
+---
+# Additional topics
 ### R packages
 + The GitHub repo is the package.
 + There are tools to make it easy to make releases, generate help files, and for others to install directly from GitHub and provide feedback.
@@ -268,7 +305,18 @@ Otherwise, likely you have a merge conflict
 
 ---
 # So, will my Git now go smoothly?
-![](figures/force.jpg)
+.center[![](figures/force.jpg)]
+
+
+---
+<br><br>
+
+.center[## Git is expressly designed to make you feel less intelligent than you thought you were.] 
+
+.right[-- Andrew Morton, when introducing Linus Torvalds <br>at a 2007 Google tech talk]
+
+<br><br>
+_Not really, but don't feel discouraged if you need to try a few times to get it right!_
 
 ---
 ## Topics not covered here
