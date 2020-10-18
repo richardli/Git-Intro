@@ -1,6 +1,6 @@
 # Git and GitHub introduction
 
-A hands-on tutorial on Git and GitHub in collaborative research settings for beginners.
+A hands-on tutorial on using Git and GitHub in collaborative research settings for beginners.
 
 The lecture was given in the Fall 2020 STAT 200 class. 
 
