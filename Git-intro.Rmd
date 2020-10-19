@@ -8,7 +8,7 @@ output:
 ---
  
 # Overview
-#### This lecture contains
+#### This lecture
 + A brief history and philosophy of version control and workflow in research settings. 
 + Introduction to Git and GitHub.
 + Hands-on tutorials: using Git.
