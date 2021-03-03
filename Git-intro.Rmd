@@ -208,6 +208,12 @@ What if you want to collaborate in someone else's repo?
 # Tutorial II: Create your local repo
 .center[![](figures/clone2.png)]
 
+
+---
+# Fun fact: most forked repository of all time on GitHub
+.center[![](figures/fork.png)]
+
+
 ---
 # Tutorial III: More than Cmd+S
 In Git, a 'commit' is a collection of changes in the repository. 
