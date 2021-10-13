@@ -2,7 +2,7 @@
 title: "Git and GitHub  for Collaboration"
 subtitle: ""
 author: "Z Richard Li"
-date: Fall, 2020
+date: Fall, 2021
 output:
   xaringan::moon_reader
 ---
@@ -159,7 +159,7 @@ Today I will cover only a small part of the workflow:
 These simple steps cover a large proportion of routine workflow with Git.
 
 ---
-# Tutorial I: clone these slides
+# Tutorial I: clone to your computer
 .center[[https://github.com/richardli/Git-Intro](https://github.com/richardli/Git-Intro)]
 
 .pull-left[ 
@@ -171,12 +171,22 @@ These simple steps cover a large proportion of routine workflow with Git.
   ![](figures/clone2.png)
 ]
 
-
-These are your local copies. Making changes does not affect the upstream repo (in my account). 
+These are your local copies. Making local changes does not affect the upstream repo (in my account). You will not have an online "copy" of the repository. 
 
 What if you want to collaborate in someone else's repo?
 + Ask to be added as collaborator
-+ Forking and Pull request (propose one-time changes to others' repos)
++ Fork and Pull request (propose one-time changes to others' repos)
+
+---
+# clone v.s. fork
+![](figures/clone_v_fork.png)
+
+
+---
+# Fun fact: most forked repository of all time on GitHub
+.center[![](figures/fork.png)]
+
+
 
 ---
 # Tutorial I: look inside a repo
@@ -207,11 +217,6 @@ What if you want to collaborate in someone else's repo?
 ---
 # Tutorial II: Create your local repo
 .center[![](figures/clone2.png)]
-
-
----
-# Fun fact: most forked repository of all time on GitHub
-.center[![](figures/fork.png)]
 
 
 ---
