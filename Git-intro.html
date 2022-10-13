@@ -4,6 +4,7 @@
     <title>Git and GitHub for Collaboration</title>
     <meta charset="utf-8" />
     <meta name="author" content="Z Richard Li" />
+    <script src="Git-intro_files/header-attrs-2.14/header-attrs.js"></script>
     <link href="Git-intro_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Git-intro_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
@@ -11,9 +12,15 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Git and GitHub for Collaboration
+]
+.author[
 ### Z Richard Li
-### Fall, 2021
+]
+.date[
+### Fall, 2022
+]
 
 ---
 
@@ -283,6 +290,35 @@ Using Git to collaborate with several other people on a project can be difficult
   * There are different tools to make the side-by-side comparison easier visually. 
   * If you are in doubt, don't force it. Communicate with your collaborator.
 
+---
+# Tutorial V: ~~Polluting~~ Improving other people's repository
+
++ There is another useful tool in Git that allows you to make suggestions to other people's codes. It is called **pull request**
+
++ The idea is that you work on a copy of the repository, make changes, and request the changes to be merged to the target branch (usually the main branch) of a repository.
+
++ The copy of the repository you work on can be a branch of the repository (if you have access to the repository itself), or a fork of the target repository (if you do not have access to it). 
+
++ In general, it is useful to create branches in your repository if you need to set aside a team member (or yourself) to work on a specific portion of your codes, and use PR to communicate (or talk to yourself) before merging the branch back to main.
+
+---
+# Pull request example
+
+&lt;img src="figures/pr.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+# Pull request example
+&lt;img src="figures/pr2.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+# Github issues page
+
++ This can be a very useful way to interact with code owners, e.g., if you run into a package error or have suggestions on package features
+
+
+&lt;img src="figures/issues.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
 
 ---
 # Some practical considerations
@@ -338,18 +374,6 @@ Using Git to collaborate with several other people on a project can be difficult
 .right[-- Linus Torvalds, 2015]
 
 
----
-## Topics not covered here
-
-Branching
-
-Pull requests
-
-Command line Git
-
-GitHub  issues page
-
-...
 
 ---
 # Resources
@@ -359,6 +383,8 @@ There are many git tutorials out there.
 What if I have a problem? Google it.
 
 Likely you will find different people asking the same question over and over again over many years!
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -402,6 +428,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

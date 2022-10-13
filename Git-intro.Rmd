@@ -2,7 +2,7 @@
 title: "Git and GitHub  for Collaboration"
 subtitle: ""
 author: "Z Richard Li"
-date: Fall, 2021
+date: Fall, 2022
 output:
   xaringan::moon_reader
 ---
@@ -276,6 +276,41 @@ knitr::include_graphics("figures/xkcd.png")
   * There are different tools to make the side-by-side comparison easier visually. 
   * If you are in doubt, don't force it. Communicate with your collaborator.
 
+---
+# Tutorial V: ~~Polluting~~ Improving other people's repository
+
++ There is another useful tool in Git that allows you to make suggestions to other people's codes. It is called **pull request**
+
++ The idea is that you work on a copy of the repository, make changes, and request the changes to be merged to the target branch (usually the main branch) of a repository.
+
++ The copy of the repository you work on can be a branch of the repository (if you have access to the repository itself), or a fork of the target repository (if you do not have access to it). 
+
++ In general, it is useful to create branches in your repository if you need to set aside a team member (or yourself) to work on a specific portion of your codes, and use PR to communicate (or talk to yourself) before merging the branch back to main.
+
+---
+# Pull request example
+
+```{r echo = FALSE, out.width = "70%", fig.align = 'center'}
+knitr::include_graphics("figures/pr.png")
+```
+
+---
+# Pull request example
+```{r echo = FALSE, out.width = "50%", fig.align = 'center'}
+knitr::include_graphics("figures/pr2.png")
+```
+
+---
+# Github issues page
+
++ This can be a very useful way to interact with code owners, e.g., if you run into a package error or have suggestions on package features
+
+
+```{r echo = FALSE, out.width = "80%", fig.align = 'center'}
+knitr::include_graphics("figures/issues.png")
+```
+
+
 
 ---
 # Some practical considerations
@@ -331,18 +366,6 @@ knitr::include_graphics("figures/xkcd.png")
 .right[-- Linus Torvalds, 2015]
 
 
----
-## Topics not covered here
-
-Branching
-
-Pull requests
-
-Command line Git
-
-GitHub  issues page
-
-...
 
 ---
 # Resources
