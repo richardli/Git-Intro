@@ -4,7 +4,7 @@
     <title>Git and GitHub for Collaboration</title>
     <meta charset="utf-8" />
     <meta name="author" content="Z Richard Li" />
-    <script src="Git-intro_files/header-attrs-2.14/header-attrs.js"></script>
+    <script src="Git-intro_files/header-attrs-2.24/header-attrs.js"></script>
     <link href="Git-intro_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Git-intro_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
@@ -19,22 +19,34 @@ class: center, middle, inverse, title-slide
 ### Z Richard Li
 ]
 .date[
-### Fall, 2022
+### Fall 2023
 ]
 
 ---
 
  
-# Overview
-#### This lecture
-+ A brief history and philosophy of version control and workflow in research settings. 
+
+# This lecture
+
+--
++ A brief history and philosophy of version control and workflow in research settings.
+
+--
 + Introduction to Git and GitHub.
-+ Hands-on tutorials: using Git.
+
+--
++ ~~Hands-on tutorials: using Git.~~
+
+--
 + Some additional topics that might be of interest, particular to STAT students. 
 
+--
 #### What I hope us to achieve
 + Reflect on your workflow and think if Git will be useful to you in your current and future projects.
+
+--
 + If you are regular Git user, have some fun and feel free to share your tips with the group. 
+--
 + If you are new to Git, get familiar with the concepts and basic operations. 
 
 #### These slides at: [https://github.com/richardli/Git-Intro](https://github.com/richardli/Git-Intro)
@@ -46,6 +58,8 @@ class: center, middle, inverse, title-slide
 Most academic researchers use two strategies for collaboration:
 
 **Shared Folders (Dropbox/Box/Google Drive)**
+
+--
 
 + Single synced shared folder.
   + `draft_20190717.tex`
@@ -62,6 +76,8 @@ Most academic researchers use two strategies for collaboration:
 # Collaboration in research
 
 **Online concurrent editing (Google Docs/Overleaf)**
+--
+
 + Single synced shared file.
 + Simultaneously editing.
 + Previous versions stored online.
@@ -75,14 +91,18 @@ Most academic researchers use two strategies for collaboration:
 # Problems
 These strategies work well for rich text document when there is a single main version. 
 
+--
+
 Managing complex projects can be difficult when you have 
   + many files, directories, and dependencies,
   + many people contributing and making edits on different files,
   + different "working versions" that are similar and exist in parallel for a period of time.
 
+--
+
 These approaches do not scale to complex collaborative projects. Someone needs to be on top of all the files and changes to fix any errors (without destroying other changes).
 
-####System for managing collaboration
+--
 In software engineering, workers have developed _social and technological solutions_ to the problem of managing collaborative work. 
 
 The technological aspect of this system is usually called _version control_.
@@ -106,6 +126,8 @@ Merging multiple changes on the same file is always painstaking -- what if there
 Git was created by Linus Torvalds, the inventor of Linux, in 2005 to manage work by hundreds of developers on the Linux kernel.
 
 Git was designed for software development by large teams. But it is useful for many kinds of projects.
+
+--
 
 **Big ideas**
 + distributed, parallel workflow
@@ -158,9 +180,36 @@ If you do not have an GitHub  account, sign up at:
 ---
 # Graphical interfaces to Git
 
-GitHub  Desktop and Sourcetree are two of the most popular GUIs. I will use Sourcetree in this tutorial. You can connect your GitHub  account (or other online platforms) to Sourcetree in `Preferences &gt; Accounts`.
+GitHub  Desktop and Sourcetree are two of the most popular GUIs. I will use Sourcetree in this tutorial. You can connect your GitHub  account (or other online platforms) to Sourcetree in `Preferences &gt; Accounts`. 
 
 .center[![](figures/sourcetree.png)]
+
+
+---
+# Password &amp; sign into GitHub
++ Unfortunately as of right now, this process is not as straightforward as it sounds...
+
+--
++ Since August 2021, GitHub has removed the password as a method of authentication if you would like to push from a software client.
+--
++ Instead what you need is a **personal access token**, which is essentially a complex password GitHub generates for you and show you only once...
+
+--
+
++ So here is how it works:
+
+--
+  + On Github.com, generate a personal access token via: Settings → Developer Settings → Personal Access Token → Generate New Token. Copy the new token (again, this is the last time you will see it).  
+
+--
+  + On Sourcetree, go to Settings → Accounts. Select GitHub as Host, Basic as Auth Type, and use your token instead of password as "Password".
+
+--
+  + When you perform your first push to Github, a pop-up window will appear to ask if you allow the use of the token (and you need to approve with your computer password). Choose "Always allow" if you are on your own personal computer. Otherwise it will appear every time for authentication.
+
+--
++ GitHub is also moving towards two-factor authentication for signing in on the web too (happening now).
+
 
 
 ---
@@ -282,7 +331,11 @@ Using Git to collaborate with several other people on a project can be difficult
 + **Pull** before push
   * get the remote updates others have made.
 
+--
+
 + If nothing shows up after pulling --&gt; awesome!
+
+--
 
 + Otherwise, likely you have a merge conflict
   * This happens when you and your collaborator made changes on the same lines of codes in the same file, that Git does not know how to resolve automatically.
@@ -295,10 +348,13 @@ Using Git to collaborate with several other people on a project can be difficult
 
 + There is another useful tool in Git that allows you to make suggestions to other people's codes. It is called **pull request**
 
+--
 + The idea is that you work on a copy of the repository, make changes, and request the changes to be merged to the target branch (usually the main branch) of a repository.
 
+--
 + The copy of the repository you work on can be a branch of the repository (if you have access to the repository itself), or a fork of the target repository (if you do not have access to it). 
 
+--
 + In general, it is useful to create branches in your repository if you need to set aside a team member (or yourself) to work on a specific portion of your codes, and use PR to communicate (or talk to yourself) before merging the branch back to main.
 
 ---
@@ -329,6 +385,8 @@ Using Git to collaborate with several other people on a project can be difficult
 + Break up codes into several files. 
 + Try not to leave uncommitted changes open for a long time.
 + Use .gitignore wisely.
+
+--
 
 ###Be aware of
 + Rich texts (e.g., .docx, .xlsx) 
@@ -372,6 +430,22 @@ Using Git to collaborate with several other people on a project can be difficult
 .center[### So I think it used to be true but isn’t any more. There is a few reasons people feel that way, but I think only one of them remains. The one that remains is fairly simple: “you can do things so many ways.” ... Generally, the best way to learn git is probably to first only do very basic things and not even look at some of the things you can do until you are familiar and confident about the basics.]
 
 .right[-- Linus Torvalds, 2015]
+
+
+# 
+
+.center[
+
+
+## Git is like grad school, intimidating, mysterious, loads of written and unwritten rules, full of different opinions from everyone about everything...
+
+
+
+
+
+### _but only a few trials and errors away from an organized and happy life :)_
+]
+
 
 
 
